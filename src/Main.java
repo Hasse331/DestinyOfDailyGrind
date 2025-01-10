@@ -21,7 +21,7 @@ public class Main {
         Player player = new Player(input);
         
         System.out.println("\nCreating player...\n");
-        int traitMultiplier = 1;
+        double traitMultiplier = 0.5;
         int dayCount = 1;
         System.out.println("Welcome! New game has been started " + player.getName() + ", here is your character starting stats: ");
         System.out.println("\n-----------------------------\n");
@@ -35,6 +35,7 @@ public class Main {
 
         System.out.println("\n\nPress ENTER to start your first day...");
         scanner.nextLine();
-
+        DayCycle dayCycle = new DayCycle(player, dayCount);
+        dayCycle.startDay(dayCount, traitMultiplier);
     }
 }
