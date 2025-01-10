@@ -10,7 +10,6 @@ public class DayCycle {
         this.dayCount = dayCount;
     }
 
-
     public void startDay(int dayCount, double traitMultiplier) {
         System.out.println("Day: " + dayCount);
         System.out.println("A new day begins!");
@@ -18,10 +17,12 @@ public class DayCycle {
         List<String> traits = player.getTraits();
         Map<String, Integer> results = Traits.runTraits(traits, traitMultiplier);
         player.setMoney(player.getMoney() + results.get("money"));
-        player.setMoney(player.getHealth() + results.get("Health"));
+        player.setMoney(player.getHealth() + results.get("health"));
         System.out.println("What do you want to do today?");
         System.out.println("1. Go to work");
         System.out.println("2. Train");
         System.out.println("3. Rest");
     }
+
+
 }

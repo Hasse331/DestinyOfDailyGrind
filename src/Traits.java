@@ -20,6 +20,7 @@ public class Traits {
         return list.get(random.nextInt(list.size()));
     }
 
+
     public static Map<String, Integer> runTraits(List<String> traits, double multiplier) {
 
         for (String trait : traits) {
@@ -27,36 +28,36 @@ public class Traits {
                 case "Alcoholist":
                     String alcohol = getTraitItem(ALL_ALCOHOL);
                     System.out.println("Trait: Alcoholist - drinking " + alcohol + "...");
-                    health -= 5;
-                    money -= 30;
+                    health -= 5 * multiplier;
+                    money -= 30 * multiplier;
                     System.out.println("health: " + health + ", money: " + money);
                     break;
                 case "Drug addict":
                     System.out.println("Trait: Drug addict - you go to streets buying drugs and use them");
-                    health -= 10;
-                    money -= 50;
+                    health -= 10 * multiplier;
+                    money -= 50 * multiplier;
                     System.out.println("health: " + health + ", money: " + money);
                     break;
                 case "Psycopath":
                     System.out.println("Trait: Psycopath - manipulating others to make money");
-                    money += 100;
-                    System.out.println("money: " + money);
+                    money += 100 * multiplier;
+                    System.out.println("money: +" + money);
                     break;
                 case "Sick":
                     System.out.println("Trait: Sick - *cough* *cough*... feeling sick");
-                    health -= 20;
+                    health -= 20 * multiplier;
                     System.out.println("health: " + health);
                     break;
                 case "Nerd":
                     System.out.println("Trait: Nerd - reading books");
-                    health += 5;
-                    money += 50;
-                    System.out.println("health: " + health + ", money: " + money);
+                    health += 5 * multiplier;
+                    money += 50 * multiplier;
+                    System.out.println("health: +" + health + ", money: +" + money);
                     break;
                 case "Body builder":
                     System.out.println("Trait: Body builder - going to gym...");
-                    health += 5;
-                    System.out.println("health: " + health);
+                    health += 5 * multiplier;
+                    System.out.println("health: +" + health);
                     break;
             }
         }
