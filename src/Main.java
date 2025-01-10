@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("------ Destiny of Daily Grind -----");
+        System.out.println("\n\n------ Destiny of Daily Grind -----");
         System.out.println("## The best Java CLI game in the world ##");
         System.out.println("## Winner of the game of the year awards 2226 ##");
         System.out.println("\n\nPress ENTER to start a new game...");
@@ -10,10 +10,31 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         scanner.nextLine();
         startNewGame();
-    
     }
 
     public static void startNewGame() {
+        System.out.println("Starting new game...");
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter your player name: ");
+        String input = scanner.nextLine();
+        Player player = new Player(input);
         
+        System.out.println("\nCreating player...\n");
+        int traitMultiplier = 1;
+        int dayCount = 1;
+        System.out.println("Welcome! New game has been started " + player.getName() + ", here is your character starting stats: ");
+        System.out.println("\n-----------------------------\n");
+        System.out.println("Player name: " + player.getName());
+        System.out.println("Day: " + dayCount);
+        System.out.println("Health: " + player.getHealth());
+        System.out.println("Money: " + player.getMoney());
+        System.out.println("Traits: " + player.getTraits());
+        System.out.println("trait Multiplier: " + traitMultiplier);
+        System.out.println("\n-----------------------------\n");
+
+        System.out.println("\n\nPress ENTER to start your first day...");
+        scanner.nextLine();
+
     }
 }
