@@ -55,6 +55,9 @@ public class Player {
     public void setDayCount(int day) {
         this.dayCount = day;
     }
+    public void setTraitMultiplier(double multiplier) {
+        this.traitMultiplier = this.traitMultiplier * multiplier;
+    }
     public void addNewTrait() {
         traits.add(Traits.getRandomTrait());
     }
