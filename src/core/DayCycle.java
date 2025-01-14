@@ -43,6 +43,10 @@ public class DayCycle {
             System.out.println("Invalid coice. Be careful!");
         }
 
+        printWithDelay(randomAction());
+        printWithDelay(randomAction());
+        printWithDelay(randomAction());
+
         printWithDelay("It's 9 pm now. What do you want to do?");
         System.out.println("3. Go party");
         System.out.println("4. Go to sleep");
@@ -86,8 +90,8 @@ public class DayCycle {
             Map<String, Integer> results = Traits.runTraits(traits, player.getTraitMultiplier());
             player.setMoney(player.getMoney() + results.get("money"));
             player.setHealth(player.getHealth() + results.get("health"));
-            System.out.println("Money now: " + player.getMoney());
             System.out.println("Health now: " + player.getHealth());
+            System.out.println("Money now: " + player.getMoney());
     
             Thread.sleep(2000);
         } catch (InterruptedException e) {

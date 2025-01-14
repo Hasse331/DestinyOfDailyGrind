@@ -26,40 +26,55 @@ public class Traits {
 
         for (String trait : traits) {
             switch (trait) {
-                case "Alcoholist":
+                case "Alcoholist": {
                     String alcohol = getTraitItem(ALL_ALCOHOL);
-                    System.out.println("Trait: Alcoholist - drinking " + alcohol + "...");
-                    health -= 20 * multiplier;
-                    money -= 30 * multiplier;
-                    System.out.println("health: " + health + ", money: " + money);
+                    System.out.println("TRAIT: Alcoholist - drinking " + alcohol + "...");
+                    final double hChange = 20 * multiplier;
+                    final double mChange = 30 * multiplier;
+                    health -= hChange;
+                    money -= mChange;
+                    System.out.println("health -" + hChange + ", money -" + mChange);
                     break;
-                case "Drug addict":
-                    System.out.println("Trait: Drug addict - you go to streets buying drugs and use them");
-                    health -= 25 * multiplier;
-                    money -= 50 * multiplier;
-                    System.out.println("health: " + health + ", money: " + money);
+                }
+                case "Drug addict": {
+                    System.out.println("TRAIT: Drug addict - you go to streets buying drugs and use them");
+                    final double hChange = 30 * multiplier;
+                    final double mChange = 50 * multiplier;
+                    health -= hChange;
+                    money -= mChange;
+                    System.out.println("health -" + hChange + ", money -" + mChange);
                     break;
-                case "Psycopath":
-                    System.out.println("Trait: Psycopath - manipulating others to make money");
-                    money += 10 * multiplier;
-                    System.out.println("money: +" + money);
+                }
+                case "Psycopath": {
+                    System.out.println("TRAIT: Psycopath - manipulating others to make money");
+                    final double mChange = 20 * multiplier;
+                    money += mChange;
+                    System.out.println("money +" + mChange);
                     break;
-                case "Sick":
-                    System.out.println("Trait: Sick - *cough* *cough*... feeling sick");
-                    health -= 20 * multiplier;
-                    System.out.println("health: " + health);
+                }
+                case "Sick": {
+                    System.out.println("TRAIT: Sick - *cough* *cough*... feeling sick");
+                    final double hChange = 40 * multiplier;
+                    health -= hChange;
+                    System.out.println("health -" + hChange);
+                    break; 
+                }
+                case "Nerd": {
+                    System.out.println("TRAIT: Nerd - reading books");
+                    final double hChange = 10 * multiplier;
+                    final double mChange = 20 * multiplier;
+                    health += hChange;
+                    money += mChange;
+                    System.out.println("health +" + hChange + ", money: +" + mChange);
                     break;
-                case "Nerd":
-                    System.out.println("Trait: Nerd - reading books");
-                    health += 5 * multiplier;
-                    money += 10 * multiplier;
-                    System.out.println("health: +" + health + ", money: +" + money);
+                }
+                case "Body builder": {
+                    System.out.println("TRAIT: Body builder - going to gym...");
+                    final double hChange = 10 * multiplier;
+                    health += hChange;
+                    System.out.println("health +" + hChange);
                     break;
-                case "Body builder":
-                    System.out.println("Trait: Body builder - going to gym...");
-                    health += 5 * multiplier;
-                    System.out.println("health: +" + health);
-                    break;
+                }
             }
         }
 

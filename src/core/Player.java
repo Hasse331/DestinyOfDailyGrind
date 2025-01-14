@@ -1,4 +1,5 @@
 package core;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -14,7 +15,7 @@ public class Player {
         this.name = name;
         this.health = 100;
         this.money = 100;
-        this.traits = Arrays.asList(Traits.getRandomTrait());
+        this.traits = new ArrayList<>(Arrays.asList(Traits.getRandomTrait()));
         this.dayCount = 1;
         this.traitMultiplier = 0.5;
     }
@@ -53,5 +54,8 @@ public class Player {
     }
     public void setDayCount(int day) {
         this.dayCount = day;
+    }
+    public void addNewTrait() {
+        traits.add(Traits.getRandomTrait());
     }
 }
