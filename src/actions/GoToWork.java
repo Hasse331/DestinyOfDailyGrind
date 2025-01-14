@@ -11,6 +11,9 @@ public class GoToWork extends Action {
     @Override
     public void execute(Player player) {
         player.setMoney(player.getMoney() + 100);
-        System.out.println(player.getName() + " went to work and earned 100 money.");
+        player.setHealth(player.getHealth() - 20);
+        System.out.println(player.getName() + " went to work and earned 100 money. 20 health lost.");
+        System.out.println("Money now: " + player.getMoney());
+        System.out.println("Health now: " + player.getHealth());
     }
 }

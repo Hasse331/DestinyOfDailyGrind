@@ -29,19 +29,19 @@ public class Traits {
                 case "Alcoholist":
                     String alcohol = getTraitItem(ALL_ALCOHOL);
                     System.out.println("Trait: Alcoholist - drinking " + alcohol + "...");
-                    health -= 5 * multiplier;
+                    health -= 20 * multiplier;
                     money -= 30 * multiplier;
                     System.out.println("health: " + health + ", money: " + money);
                     break;
                 case "Drug addict":
                     System.out.println("Trait: Drug addict - you go to streets buying drugs and use them");
-                    health -= 10 * multiplier;
+                    health -= 25 * multiplier;
                     money -= 50 * multiplier;
                     System.out.println("health: " + health + ", money: " + money);
                     break;
                 case "Psycopath":
                     System.out.println("Trait: Psycopath - manipulating others to make money");
-                    money += 100 * multiplier;
+                    money += 10 * multiplier;
                     System.out.println("money: +" + money);
                     break;
                 case "Sick":
@@ -52,7 +52,7 @@ public class Traits {
                 case "Nerd":
                     System.out.println("Trait: Nerd - reading books");
                     health += 5 * multiplier;
-                    money += 50 * multiplier;
+                    money += 10 * multiplier;
                     System.out.println("health: +" + health + ", money: +" + money);
                     break;
                 case "Body builder":

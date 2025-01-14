@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+import core.DayCycle;
 import core.Player;
 
 public class Main {
@@ -23,21 +24,19 @@ public class Main {
         Player player = new Player(input);
         
         System.out.println("\nCreating player...\n");
-        double traitMultiplier = 0.5;
-        int dayCount = 1;
         System.out.println("Welcome! New game has been started " + player.getName() + ", here is your character starting stats: ");
         System.out.println("\n-----------------------------\n");
         System.out.println("Player name: " + player.getName());
-        System.out.println("Day: " + dayCount);
+        System.out.println("Day: " + player.getDayCount());
         System.out.println("Health: " + player.getHealth());
         System.out.println("Money: " + player.getMoney());
         System.out.println("Traits: " + player.getTraits());
-        System.out.println("trait Multiplier: " + traitMultiplier);
+        System.out.println("trait Multiplier: " + player.getTraitMultiplier());
         System.out.println("\n-----------------------------\n");
 
         System.out.println("\n\nPress ENTER to start your first day...");
         scanner.nextLine();
-        DayCycle dayCycle = new DayCycle(player, dayCount);
-        dayCycle.startDay(dayCount, traitMultiplier);
+        DayCycle dayCycle = new DayCycle(player);
+        dayCycle.startDay();
     }
 }

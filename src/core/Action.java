@@ -9,6 +9,12 @@ public abstract class Action {
 
     public abstract void execute(Player palyer);
 
+    public void nextDay(Player player) {
+        player.setDayCount(player.getDayCount() + 1);
+        DayCycle dayCycle = new DayCycle(player);
+        dayCycle.startDay();
+    }
+
     public String getDescription() {
         return description;
     }

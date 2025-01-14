@@ -12,5 +12,6 @@ public class Rest extends Action {
     public void execute(Player player) {
         player.setHealth(player.getHealth() + 20);
         System.out.println(player.getName() + " rested and regained 20 health.");
+        System.out.println("Health now: " + player.getHealth());
     }
 }

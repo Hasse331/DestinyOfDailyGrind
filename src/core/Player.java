@@ -7,12 +7,16 @@ public class Player {
     private int health;
     private int money;
     private List<String> traits;
+    private int dayCount;
+    double traitMultiplier;
 
     public Player(String name) {
         this.name = name;
         this.health = 100;
         this.money = 100;
         this.traits = Arrays.asList(Traits.getRandomTrait());
+        this.dayCount = 1;
+        this.traitMultiplier = 0.5;
     }
 
     // Getter-metodit (lukemista varten)
@@ -32,6 +36,13 @@ public class Player {
         return traits;
     }
 
+    public int getDayCount() {
+        return dayCount;
+    }
+    public double getTraitMultiplier() {
+        return traitMultiplier;
+    }
+
     // Setter-metodit (muokkaamista varten)
     public void setHealth(int health) {
         this.health = health;
@@ -39,5 +50,8 @@ public class Player {
 
     public void setMoney(int money) {
         this.money = money;
+    }
+    public void setDayCount(int day) {
+        this.dayCount = day;
     }
 }
