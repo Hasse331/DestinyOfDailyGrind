@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+import core.Player;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("\n\n------ Destiny of Daily Grind -----");
