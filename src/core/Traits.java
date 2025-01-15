@@ -5,11 +5,17 @@ import java.util.Random;
 import java.util.HashMap;
 import java.util.Map;
 
+// Utility calss for player traits and running those
+// Instence can not be made
 public class Traits {
     private static final List<String> ALL_TRAITS = Arrays.asList("Alcoholist", "Drug addict", "Psycopath", "Sick", "Nerd", "Body builder");
     private static List<String> ALL_ALCOHOL = Arrays.asList("Beer", "Vodka", "Gin", "Homemade brew", "Whisky", "Vodka mixer");
     private static int health;
     private static int money;
+
+    private Traits() {
+        throw new UnsupportedOperationException("This is a utility class and cannot be instantiated.");
+    }
 
     public static String getRandomTrait() {
         Random random = new Random();
