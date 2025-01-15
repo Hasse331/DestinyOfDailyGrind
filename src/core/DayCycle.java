@@ -33,7 +33,7 @@ public class DayCycle {
         printWithDelay(randomAction());
 
         printWithDelay("It's 9 am. What do you want to do today?");
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = InputManager.getScanner();
         System.out.println("1. Go to work");
         System.out.println("2. Rest");
         int choice = scanner.nextInt() - 1;

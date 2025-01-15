@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 import core.DayCycle;
+import core.InputManager;
 import core.Player;
 
 public class Main {
@@ -10,7 +11,7 @@ public class Main {
         System.out.println("## Winner of the game of the year awards 2226 ##");
         System.out.println("\n\nPress ENTER to start a new game...");
     
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = InputManager.getScanner();
         scanner.nextLine();
         startNewGame();
     }
@@ -18,7 +19,7 @@ public class Main {
     public static void startNewGame() {
         System.out.println("Starting new game...");
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = InputManager.getScanner();
         System.out.println("Enter your player name: ");
         String input = scanner.nextLine();
         Player player = new Player(input);
