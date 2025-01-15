@@ -38,6 +38,7 @@ public class Main {
         System.out.println("\n\nPress ENTER to start your first day...");
         scanner.nextLine();
         DayCycle dayCycle = new DayCycle(player);
+        DayCycle.printWithDelay("You wake up feeling refreshed.");
         dayCycle.startDay();
     }
 }

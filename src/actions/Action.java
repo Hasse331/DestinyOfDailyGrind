@@ -3,6 +3,7 @@ package actions;
 import java.util.Random;
 
 import core.DayCycle;
+import core.InputManager;
 import core.Player;
 
 public abstract class Action {
@@ -22,6 +23,7 @@ public abstract class Action {
                 player.addNewTrait();
                 System.out.println(player.getName() + " got new trait:");
                 System.out.println("TRAITS: " + player.getTraits());
+                InputManager.continueInput();
             }
 
         player.setTraitMultiplier(1.5);

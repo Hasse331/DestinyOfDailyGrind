@@ -1,7 +1,10 @@
 package actions;
 
+import java.util.Scanner;
+
 import core.DayCycle;
 import core.EventManager;
+import core.InputManager;
 import core.Player;
 
 public class GoToWork extends Action {
@@ -27,5 +30,6 @@ public class GoToWork extends Action {
         System.out.println(player.getName() + " went to work and earned 100 money. 20 health lost.");
         System.out.println("Money now: " + player.getMoney());
         System.out.println("Health now: " + player.getHealth());
+        DayCycle.printWithDelay("Going to home...");
     }
 }

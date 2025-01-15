@@ -27,6 +27,7 @@ public class Sleep extends Action {
         Scanner scanner = InputManager.getScanner();
         System.out.println("Press ENTER to start new day");
         scanner.nextLine();
+        DayCycle.printWithDelay("You wake up feeling refreshed.");
         nextDay(player);
     }
 }

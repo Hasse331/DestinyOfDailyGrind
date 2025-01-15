@@ -1,6 +1,9 @@
 package actions;
+import java.util.Scanner;
+
 import core.DayCycle;
 import core.EventManager;
+import core.InputManager;
 import core.Player;
 
 
@@ -16,6 +19,8 @@ public class Rest extends Action {
         DayCycle.printWithDelay("Resting: " + DayCycle.randomAction());
         DayCycle.printWithDelay("Resting: " + DayCycle.randomAction());
         EventManager.triggerRestEvent(player);
+        DayCycle.printWithDelay("Resting: " + DayCycle.randomAction());
+        DayCycle.printWithDelay("Resting: " + DayCycle.randomAction());
         player.setHealth(player.getHealth() + 20);
         System.out.println(player.getName() + " rested and regained 20 health.");
         System.out.println("Health now: " + player.getHealth());

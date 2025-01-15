@@ -27,8 +27,11 @@ public class DayCycle {
     }
 
     public void startDay() {
-        printWithDelay("A new day begins! - Day: " + player.getDayCount());
-        printWithDelay("You wake up feeling refreshed.");
+
+        // These are coming from Sleep, Party and Main:
+        // DayCycle.printWithDelay("You wake up feeling xxxx.");
+        DayCycle.printWithDelay("A new day begins! - Day: " + player.getDayCount());
+
         runTraits();
         printWithDelay(randomAction());
         printWithDelay(randomAction());
