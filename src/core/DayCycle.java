@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.Random;
 import java.util.Scanner;
 
+import actions.Action;
 import actions.GoToWork;
 import actions.Rest;
 import actions.Party;
@@ -58,7 +59,7 @@ public class DayCycle {
         }
     }
 
-    private void printWithDelay(String text) {
+    public static void printWithDelay(String text) {
         try {
             System.out.println("\n" + text + "\n");
             Random random = new Random();
@@ -70,7 +71,7 @@ public class DayCycle {
         }
     }
 
-    private String randomAction() {
+    public static String randomAction() {
     List<String> actions = Arrays.asList(
         "Chilling...",
         "Opening fridge...",

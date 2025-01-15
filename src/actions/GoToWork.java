@@ -1,6 +1,7 @@
 package actions;
 
-import core.Action;
+import core.DayCycle;
+import core.EventManager;
 import core.Player;
 
 public class GoToWork extends Action {
@@ -10,6 +11,17 @@ public class GoToWork extends Action {
 
     @Override
     public void execute(Player player) {
+        System.out.println(player.getName() + " goes to work");
+        DayCycle.printWithDelay("Working...");
+        DayCycle.printWithDelay("Brewing coffee...");
+        DayCycle.printWithDelay("Drinking coffee...");
+        DayCycle.printWithDelay("Working...");
+        EventManager.triggerWorkEvent(player);
+        DayCycle.printWithDelay("Working...");
+        DayCycle.printWithDelay(DayCycle.randomAction());
+        DayCycle.printWithDelay("Drinking coffee...");
+        DayCycle.printWithDelay("Working...");
+        DayCycle.printWithDelay("Working...");
         player.setMoney(player.getMoney() + 100);
         player.setHealth(player.getHealth() - 20);
         System.out.println(player.getName() + " went to work and earned 100 money. 20 health lost.");

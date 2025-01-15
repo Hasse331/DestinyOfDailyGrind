@@ -1,6 +1,9 @@
-package core;
+package actions;
 
 import java.util.Random;
+
+import core.DayCycle;
+import core.Player;
 
 public abstract class Action {
     protected String description;
