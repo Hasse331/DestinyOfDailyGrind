@@ -1,10 +1,8 @@
 package actions;
 
-import java.util.Scanner;
 
 import core.DayCycle;
 import core.EventManager;
-import core.InputManager;
 import core.Player;
 
 public class GoToWork extends Action {
