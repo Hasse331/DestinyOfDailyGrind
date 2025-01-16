@@ -43,6 +43,15 @@ public class Player {
         return traits;
     }
 
+    public void getAllStats() {
+        System.out.println("------ " + name + " stats ------");
+        System.out.println("Health: " + health);
+        System.out.println("Money: " + money);
+        System.out.println("Strength: " + strength);
+        System.out.println("Traits: " + traits);
+        System.out.println("------------------------------");
+    }
+
     public int getDayCount() {
         return dayCount;
     }
@@ -55,7 +64,7 @@ public class Player {
         this.health = health;
         if (health <= 0) {
             System.out.println(name + "Has died");
-            endGame();
+            gameOver();
         }
     }
 
@@ -83,7 +92,7 @@ public class Player {
         traits.add(Traits.getRandomTrait());
     }
 
-    public void endGame() {
+    public void gameOver() {
         DayCycle.printWithDelay("---- GAME OVER ----");
         DayCycle.printWithDelay("Congratulatins! You succesfully survived" + dayCount + " Days!");
         System.exit(0);
