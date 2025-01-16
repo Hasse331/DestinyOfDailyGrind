@@ -4,8 +4,8 @@ import java.util.Arrays;
 import java.util.List;
 
 public class Player {
-    private String name;
-    private int health;
+    protected String name;
+    protected int health;
     private int money;
     private int strength;
     private List<String> traits;
@@ -44,12 +44,12 @@ public class Player {
     }
 
     public void getAllStats() {
-        System.out.println("------ " + name + " stats ------");
+        System.out.println("\n------ " + name + " stats ------");
         System.out.println("Health: " + health);
         System.out.println("Money: " + money);
         System.out.println("Strength: " + strength);
         System.out.println("Traits: " + traits);
-        System.out.println("------------------------------");
+        System.out.println("------------------------------\n");
     }
 
     public int getDayCount() {
@@ -82,6 +82,11 @@ public class Player {
             
         }
     }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
     public void setDayCount(int day) {
         this.dayCount = day;
     }
@@ -92,7 +97,7 @@ public class Player {
         traits.add(Traits.getRandomTrait());
     }
 
-    public void gameOver() {
+    private void gameOver() {
         DayCycle.printWithDelay("---- GAME OVER ----");
         DayCycle.printWithDelay("Congratulatins! You succesfully survived " + dayCount + " Days!");
         System.exit(0);

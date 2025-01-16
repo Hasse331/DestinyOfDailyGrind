@@ -1,6 +1,5 @@
 package actions;
 
-import java.util.Scanner;
 
 import core.DayCycle;
 import core.EventManager;
@@ -27,7 +26,7 @@ public class Party extends Action {
         System.out.println(player.getName() + " went to party for whole night.  -50 money., -25 health.");
         System.out.println("Money now: " + player.getMoney());
         System.out.println("Health now: " + player.getHealth());
-        InputManager.continueInput();
+        InputManager.continueInputDouble();
         DayCycle.printWithDelay("You wake up with headache and feeling exhausted.");
         nextDay(player);
     }

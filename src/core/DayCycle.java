@@ -11,6 +11,7 @@ import actions.GoToWork;
 import actions.Rest;
 import actions.Party;
 import actions.Sleep;
+import npc.TrainerNpc;
 
 
 public class DayCycle {
@@ -35,6 +36,22 @@ public class DayCycle {
         runTraits();
         printWithDelay(randomAction());
         printWithDelay(randomAction());
+
+        if (InputManager.getRandomDouble() < 0.2) {
+            TrainerNpc johnTrainer = TrainerNpc.getInstance();
+            johnTrainer.conversation(player);
+        }
+
+        if (player.getDayCount() % 7 == 0) {
+            System.out.println("It's time to pay rent!");
+            if (player.getMoney() >= 100) {
+                player.setMoney(player.getMoney() - 100);
+                System.out.println("You paid 100 coins as rent. Remaining money: " + player.getMoney());
+            } else {
+                System.out.println("You don't have enough money to pay rent. Game over!");
+                System.exit(0);
+            }
+        }
 
         printWithDelay("It's 9 am. What do you want to do today?");
         Scanner scanner = InputManager.getScanner();

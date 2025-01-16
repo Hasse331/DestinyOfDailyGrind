@@ -28,12 +28,12 @@ public class InputManager {
     }
 
     public static void continueInput() {
-        System.out.println("Press ENTER to continue");
+        System.out.println("\nPress ENTER to continue\n");
         scanner.nextLine();
     }
 
     public static void continueInputDouble() {
-        System.out.println("Press ENTER to continue");
+        System.out.println("\nPress ENTER to continue\n");
         scanner.nextLine();
         scanner.nextLine();
     }

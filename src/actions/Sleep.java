@@ -1,7 +1,5 @@
 package actions;
 
-import java.util.Scanner;
-
 import core.DayCycle;
 import core.EventManager;
 import core.InputManager;
