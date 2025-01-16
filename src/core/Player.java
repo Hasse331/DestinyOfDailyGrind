@@ -7,6 +7,7 @@ public class Player {
     private String name;
     private int health;
     private int money;
+    private int strength;
     private List<String> traits;
     private int dayCount;
     double traitMultiplier;
@@ -15,6 +16,7 @@ public class Player {
         this.name = name;
         this.health = 100;
         this.money = 100;
+        this.strength = 20;
         this.traits = new ArrayList<>(Arrays.asList(Traits.getRandomTrait()));
         this.dayCount = 1;
         this.traitMultiplier = 0.5;
@@ -31,6 +33,10 @@ public class Player {
 
     public int getMoney() {
         return money;
+    }
+
+    public int getStrength() {
+        return strength;
     }
 
     public List<String> getTraits() {
@@ -60,5 +66,9 @@ public class Player {
     }
     public void addNewTrait() {
         traits.add(Traits.getRandomTrait());
+    }
+
+    public void endGame() {
+
     }
 }
