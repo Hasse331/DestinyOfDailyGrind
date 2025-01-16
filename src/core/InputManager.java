@@ -9,7 +9,6 @@ public class InputManager {
 
     static {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
-            System.out.println("Closing scanner...");
             scanner.close();  
         }));
     }

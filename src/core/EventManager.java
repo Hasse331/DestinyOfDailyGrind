@@ -15,7 +15,7 @@ public class EventManager {
     }
 
     public static void triggerRestEvent(Player player) {
-        if (InputManager.getRandomDouble() < 0.20) {
+        if (InputManager.getRandomDouble() < 0.10) {
             List<Action> events = List.of(new Burglar());
 
             events.get(InputManager.getRandomInt(events.size())).execute(player);
@@ -25,7 +25,7 @@ public class EventManager {
 
     public static void triggerWorkEvent(Player player) {
         
-        if (InputManager.getRandomDouble() < 0.20) {
+        if (InputManager.getRandomDouble() < 0.10) {
             List<Action> events = List.of(new Promotion());
 
             events.get(InputManager.getRandomInt(events.size())).execute(player);
@@ -35,7 +35,7 @@ public class EventManager {
 
     public static void triggerPartyEvent(Player player) {
         
-        if (InputManager.getRandomDouble() < 0.20) {
+        if (InputManager.getRandomDouble() < 0.1) {
             List<Action> events = List.of(new LostWallet());
 
             events.get(InputManager.getRandomInt(events.size())).execute(player);
@@ -45,7 +45,7 @@ public class EventManager {
 
     public static void triggerSleepEvent(Player player) {
         
-        if (InputManager.getRandomDouble()  < 0.20) {
+        if (InputManager.getRandomDouble()  < 0.1) {
             List<Action> events = List.of(new Burglar());
 
             events.get(InputManager.getRandomInt(events.size())).execute(player);

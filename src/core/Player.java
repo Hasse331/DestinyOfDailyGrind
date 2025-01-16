@@ -63,7 +63,7 @@ public class Player {
     public void setHealth(int health) {
         this.health = health;
         if (health <= 0) {
-            System.out.println(name + "Has died");
+            System.out.println(name + " died!");
             gameOver();
         }
     }
@@ -94,7 +94,7 @@ public class Player {
 
     public void gameOver() {
         DayCycle.printWithDelay("---- GAME OVER ----");
-        DayCycle.printWithDelay("Congratulatins! You succesfully survived" + dayCount + " Days!");
+        DayCycle.printWithDelay("Congratulatins! You succesfully survived " + dayCount + " Days!");
         System.exit(0);
     }
 }

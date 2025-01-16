@@ -27,9 +27,7 @@ public class Party extends Action {
         System.out.println(player.getName() + " went to party for whole night.  -50 money., -25 health.");
         System.out.println("Money now: " + player.getMoney());
         System.out.println("Health now: " + player.getHealth());
-        Scanner scanner = InputManager.getScanner();
-        System.out.println("Press ENTER to start new day");
-        scanner.nextLine();
+        InputManager.continueInput();
         DayCycle.printWithDelay("You wake up with headache and feeling exhausted.");
         nextDay(player);
     }

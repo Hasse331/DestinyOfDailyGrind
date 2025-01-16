@@ -26,14 +26,7 @@ public class Main {
         
         System.out.println("\nCreating player...\n");
         System.out.println("Welcome! New game has been started " + player.getName() + ", here is your character starting stats: ");
-        System.out.println("\n-----------------------------\n");
-        System.out.println("Player name: " + player.getName());
-        System.out.println("Day: " + player.getDayCount());
-        System.out.println("Health: " + player.getHealth());
-        System.out.println("Money: " + player.getMoney());
-        System.out.println("Traits: " + player.getTraits());
-        System.out.println("trait Multiplier: " + player.getTraitMultiplier());
-        System.out.println("\n-----------------------------\n");
+        player.getAllStats();
 
         System.out.println("\n\nPress ENTER to start your first day...");
         scanner.nextLine();

@@ -24,9 +24,7 @@ public class Sleep extends Action {
         player.setHealth(player.getHealth() + 25);
         System.out.println(player.getName() + " decided to go to sleep. Gained +20 health!");
         System.out.println("Health now: " + player.getHealth());
-        Scanner scanner = InputManager.getScanner();
-        System.out.println("Press ENTER to start new day");
-        scanner.nextLine();
+        InputManager.continueInputDouble();
         DayCycle.printWithDelay("You wake up feeling refreshed.");
         nextDay(player);
     }
