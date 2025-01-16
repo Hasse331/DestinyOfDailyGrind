@@ -53,6 +53,10 @@ public class Player {
     // Setter-metodit (muokkaamista varten)
     public void setHealth(int health) {
         this.health = health;
+        if (health <= 0) {
+            System.out.println(name + "Has died");
+            endGame();
+        }
     }
 
     public void setMoney(int money) {
@@ -69,6 +73,8 @@ public class Player {
     }
 
     public void endGame() {
-
+        DayCycle.printWithDelay("---- GAME OVER ----");
+        DayCycle.printWithDelay("Congratulatins! You succesfully survived" + dayCount + " Days!");
+        System.exit(0);
     }
 }
