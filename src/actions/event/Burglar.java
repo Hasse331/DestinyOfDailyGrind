@@ -3,10 +3,8 @@ package actions.event;
 import actions.Action;
 import core.InputManager;
 import core.Player;
-import java.util.Random;
 
 public class Burglar extends Action {
-    private final Random random = new Random();
 
     public Burglar() {
         super("A burglar sneaks into your house!");
@@ -23,7 +21,7 @@ public class Burglar extends Action {
 
         if (choice == 1) {
             System.out.println(player.getName() + " bravely confronts the burglar!");
-            if (random.nextDouble() < 0.5) {
+            if (InputManager.getRandomDouble() < 0.5) {
                 System.out.println("You managed to scare the burglar away!");
             } else {
                 System.out.println("The burglar fought back and you lost some health!");

@@ -23,6 +23,11 @@ public class InputManager {
         return randomDouble;
     }
 
+    public static int getRandomInt(int bound) {
+        int randomInt = random.nextInt(bound);
+        return randomInt;
+    }
+
     public static void continueInput() {
         System.out.println("Press ENTER to continue");
         scanner.nextLine();
