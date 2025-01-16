@@ -2,6 +2,7 @@ package core;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 public class Player {
     private String name;
@@ -61,6 +62,17 @@ public class Player {
 
     public void setMoney(int money) {
         this.money = money;
+        if (money <= -100 && money < 0) {
+            System.out.println(name + "'s credit card debt keeps growing...");
+        }
+        else if (money <= -200) {
+            System.out.println(name + "'s bills are not paid. Let's hope there will be no trouble");
+            
+            if (InputManager.getRandomDouble() < 0.2) {
+                EventManager.triggerDebtEvent();
+            }
+            
+        }
     }
     public void setDayCount(int day) {
         this.dayCount = day;

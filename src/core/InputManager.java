@@ -1,9 +1,11 @@
 package core;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class InputManager {
     private static final Scanner scanner = new Scanner(System.in);
+    private static final Random random = new Random();
 
     static {
         Runtime.getRuntime().addShutdownHook(new Thread(() -> {
@@ -14,6 +16,11 @@ public class InputManager {
 
     public static Scanner getScanner() {
         return scanner;
+    }
+
+    public static Double getRandomDouble() {
+        double randomDouble = random.nextDouble();
+        return randomDouble;
     }
 
     public static void continueInput() {

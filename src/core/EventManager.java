@@ -64,4 +64,7 @@ public class EventManager {
             InputManager.continueInputDouble();
         }
     }
+    public static void triggerDebtEvent() {
+        
+    }
 }
