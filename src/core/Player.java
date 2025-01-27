@@ -7,6 +7,7 @@ public class Player {
     protected String name;
     protected int health;
     private int money;
+    private int moneyEarned;
     private int strength;
     private List<String> traits;
     private int dayCount;
@@ -16,6 +17,7 @@ public class Player {
         this.name = name;
         this.health = 100;
         this.money = 100;
+        this.moneyEarned = this.money;
         this.strength = 20;
         this.traits = new ArrayList<>(Arrays.asList(Traits.getRandomTrait()));
         this.dayCount = 1;
@@ -33,6 +35,9 @@ public class Player {
 
     public int getMoney() {
         return money;
+    }
+    public int moneyEarned() {
+        return moneyEarned;
     }
 
     public int getStrength() {
@@ -70,6 +75,7 @@ public class Player {
 
     public void setMoney(int money) {
         this.money = money;
+        this.moneyEarned += money;
         if (money <= -100 && money < 0) {
             System.out.println(name + "'s credit card debt keeps growing...");
         }
